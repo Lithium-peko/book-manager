@@ -1,0 +1,18 @@
+server:
+  port: 8700
+
+spring:
+  application:
+    name: config-server
+
+  cloud:
+    config:
+      server:
+        git:
+          uri: file://D:/SpringCloud/config-repo
+          default-label: master
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8801/eureka, http://localhost:8802/eureka
